@@ -27,11 +27,13 @@ $ cat ~/.gitconfig
 [user]
         name = john
         email = john@john.com
-[includeIf "gitdir:~/bob"]
+[includeIf "gitdir:~/bob/"]
         path = ~/.gitconfig-bob
-[includeIf "gitdir:~/.gitconfig-alice"]
+[includeIf "gitdir:~/alice/"]
         path = ~/.gitconfig-alice
 ```
+
+**Attention**: trailing slash in `gitdir` directive is a MUST!
 
 ### Step 4: define each account gitconfig
 
